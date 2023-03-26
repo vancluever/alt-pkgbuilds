@@ -1,0 +1,13 @@
+[Unit]
+Description="Deckmaster device node activation"
+
+[Path]
+PathExists=/dev/streamdeck
+PathExists=/dev/streamdeck-mini
+PathExists=/dev/streamdeck-xl
+Unit=deckmaster.service
+
+[Install]
+WantedBy=default.target
+
+; vim: set ft=dosini:

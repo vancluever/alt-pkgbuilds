@@ -1,0 +1,12 @@
+[Unit]
+Description="Deckmaster - Elgato Stream Deck control daemon"
+
+[Service]
+ExecStart=/usr/bin/deckmaster --deck "${HOME}/.config/deckmaster/main.deck"
+Restart=on-failure
+ExecReload=kill -HUP "${MAINPID}"
+
+[Install]
+WantedBy=default.target
+
+; vim: set ft=dosini:
